@@ -42,7 +42,7 @@ const News = ({ country, category, pageSize, setProgress }) => {
         <div className="containor">
           <div className="row">
             {articles.map((element) => (
-              <div className="col-md-4" key={element.url}>
+              <div className="col-md-6 col-lg-4" key={element.url}>
                 <NewsItem
                   title={element.title ?? ""}
                   description={element.description ?? ""}
