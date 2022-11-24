@@ -16,7 +16,6 @@ const News = ({ country, category, pageSize, setProgress }) => {
       page === 1 && setProgress(10);
       setLoading(true);
       const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${envConfigs.newsApiKey}&page=${page}&pageSize=${pageSize}`;
-      console.info(url);
 
       const data = await fetch(url);
       const parsedData = await data.json();
