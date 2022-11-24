@@ -1,5 +1,14 @@
-.card:hover{
-    z-index: 1;
-    box-shadow: 0 8px 50px rgba(0,0,0,0.2);
-    transform: scale(1.1);
+.card:hover {
+  z-index: 1;
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.read-more-less--more {
+  font-size: 26px;
+  font-weight: bold;
+}
+.read-more-less--less {
+  font-size: 26px;
+  font-weight: bold;
 }

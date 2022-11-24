@@ -30,8 +30,8 @@ const NewsItem = (props) => {
           <h5 className="card-title">
             <ReactReadMoreReadLess
               charLimit={30}
-              readMoreText=<b>{"Read more ▼"}</b>
-              readLessText=<b>{"Read less ▲"}</b>
+              readMoreText={"Read more ▼"}
+              readLessText={"Read less ▲"}
               readMoreClassName="read-more-less--more"
               readLessClassName="read-more-less--less"
             >
@@ -44,8 +44,8 @@ const NewsItem = (props) => {
           <p className="card-text">
             <ReactReadMoreReadLess
               charLimit={30}
-              readMoreText=<b>{"Read more ▼"}</b>
-              readLessText=<b>{"Read less ▲"}</b>
+              readMoreText={"Read more ▼"}
+              readLessText={"Read less ▲"}
               readMoreClassName="read-more-less--more"
               readLessClassName="read-more-less--less"
             >
