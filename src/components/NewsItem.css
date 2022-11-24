@@ -1,7 +1,23 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
 .card:hover {
   z-index: 1;
   box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
+}
+.container-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10;
+}
+.card-img {
+  object-fit: cover;
+  width: 450px;
+  height: 300px;
 }
 
 .read-more-less--more {
