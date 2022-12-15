@@ -58,7 +58,7 @@ const News = ({ country, category, pageSize, setProgress }) => {
           {results.map((element) => (
             <div className="col-md-6 col-lg-4" key={element.url}>
               <NewsItem
-                imageUrl={element.multimedia[1].url}
+                // imageUrl={element.multimedia[0].url}
                 title={element.title ?? ""}
                 description={element.abstract ?? ""}
                 author={element.byline}

@@ -1,10 +1,10 @@
 import React from "react";
-import NoImage from "../image/no image.jpg";
+// import NoImage from "../image/no image.jpg";
 import "./NewsItem.css";
 // import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const NewsItem = (props) => {
-  let { title, description, imageUrl, newsUrl, author, date } = props;
+  let { title, description, newsUrl, author, date } = props;
   return (
     <>
       <div className="container">
@@ -17,13 +17,13 @@ const NewsItem = (props) => {
             maxHeight: 600,
           }}
         >
-          <div className="container-img">
+          {/* <div className="container-img">
             <img
               className="card-img"
               src={imageUrl ? imageUrl : NoImage}
               alt=""
             />
-          </div>
+          </div> */}
 
           <div className="card-body">
             <h5 className="card-title">
