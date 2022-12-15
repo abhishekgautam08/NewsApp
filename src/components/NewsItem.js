@@ -1,7 +1,7 @@
 import React from "react";
 import NoImage from "../image/no image.jpg";
 import "./NewsItem.css";
-import ReactReadMoreReadLess from "react-read-more-read-less";
+// import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const NewsItem = (props) => {
   let { title, description, imageUrl, newsUrl, author, date } = props;
