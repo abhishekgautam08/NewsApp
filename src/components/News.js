@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 import { envConfigs } from "../utils/config";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 // import InfiniteScroll from "react-infinite-scroll-component";
 import { NEWS_API_BASE_URL } from "../utils/constants";
 
