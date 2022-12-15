@@ -12,7 +12,6 @@ const NewsItem = (props) => {
           className="card"
           style={{
             margin: 3,
-
             maxWidth: 500,
             maxHeight: 800,
           }}
@@ -23,7 +22,7 @@ const NewsItem = (props) => {
               src={
                 element.multimedia[0].url ? element.multimedia[0].url : NoImage
               }
-              alt=""
+              alt="NOIMAGE"
             />
           </div>
 
@@ -49,7 +48,7 @@ const NewsItem = (props) => {
               <small className="text-muted">
                 {element.author ? element.author : "Unknown"}
                 <br />
-                <b>Last updated- </b> {new Date(element.date).toLocaleString()}
+                <b>Last updated- </b> {Date(element.date).toLocaleString()}
               </small>
             </p>
             <a

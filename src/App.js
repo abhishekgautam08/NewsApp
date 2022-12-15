@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
-  const pageSize = 9;
   const [progress, setProgress] = useState(0);
 
   return (
@@ -19,12 +18,7 @@ const App = () => {
             exact
             path="/"
             element={
-              <News
-                setProgress={setProgress}
-                key="home"
-                pageSize={pageSize}
-                section="home"
-              />
+              <News setProgress={setProgress} key="home" section="home" />
             }
           ></Route>
           <Route
@@ -34,7 +28,6 @@ const App = () => {
               <News
                 setProgress={setProgress}
                 key="business"
-                pageSize={pageSize}
                 section="business"
               />
             }
@@ -43,48 +36,28 @@ const App = () => {
             exact
             path="/movies"
             element={
-              <News
-                setProgress={setProgress}
-                key="movies"
-                pageSize={pageSize}
-                section="movies"
-              />
+              <News setProgress={setProgress} key="movies" section="movies" />
             }
           ></Route>
           <Route
             exact
             path="/food"
             element={
-              <News
-                setProgress={setProgress}
-                key="food"
-                pageSize={pageSize}
-                section="food"
-              />
+              <News setProgress={setProgress} key="food" section="food" />
             }
           ></Route>
           <Route
             exact
             path="/health"
             element={
-              <News
-                setProgress={setProgress}
-                key="health"
-                pageSize={pageSize}
-                section="health"
-              />
+              <News setProgress={setProgress} key="health" section="health" />
             }
           ></Route>
           <Route
             exact
             path="/science"
             element={
-              <News
-                setProgress={setProgress}
-                key="science"
-                pageSize={pageSize}
-                section="science"
-              />
+              <News setProgress={setProgress} key="science" section="science" />
             }
           ></Route>
 
@@ -92,12 +65,7 @@ const App = () => {
             exact
             path="/sports"
             element={
-              <News
-                setProgress={setProgress}
-                key="sports"
-                pageSize={pageSize}
-                section="sports"
-              />
+              <News setProgress={setProgress} key="sports" section="sports" />
             }
           ></Route>
           <Route
@@ -107,7 +75,6 @@ const App = () => {
               <News
                 setProgress={setProgress}
                 key="technology"
-                pageSize={pageSize}
                 section="technology"
               />
             }
