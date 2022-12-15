@@ -6,7 +6,7 @@ import { envConfigs } from "../utils/config";
 // import InfiniteScroll from "react-infinite-scroll-component";
 import { NEWS_API_BASE_URL } from "../utils/constants";
 
-const News = ({ country, category, pageSize, setProgress }) => {
+const News = ({ country, section, pageSize, setProgress }) => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   // const [page, setPage] = useState(1);
@@ -16,19 +16,12 @@ const News = ({ country, category, pageSize, setProgress }) => {
     (async () => {
       // page === 1 && setProgress(10);
       setLoading(true);
-      // const url = `${NEWS_API_BASE_URL}/top-headlines?country=${country}&category=${category}&apiKey=${envConfigs.newsApiKey}&page=${page}&pageSize=${pageSize}`;
-      // const url =    `${NEWS_API_BASE_URL}/news?access_key=${ envConfigs.newsApiKey}&languages=en&categories=${category}&offset=${(page - 1) * pageSize   }&limit=${pageSize}`;
-      const url = `${NEWS_API_BASE_URL}/arts.json?api-key=${envConfigs.newsApiKey}`;
+      const url = `${NEWS_API_BASE_URL}/${section}.json?api-key=${envConfigs.newsApiKey}`;
 
+      console.log(url);
       const data = await fetch(url);
       const parsedData = await data.json();
-
       console.log(parsedData);
-
-      // if (parsedData.error) {
-      //   return;
-      // }
-
       setResults((art) => art.concat(parsedData.results));
       // setTotalResults(parsedData.pagination.total);
       setLoading(false);
@@ -37,7 +30,7 @@ const News = ({ country, category, pageSize, setProgress }) => {
   }, [
     // page,
     country,
-    category,
+    section,
     pageSize,
     setProgress,
   ]);
@@ -59,11 +52,12 @@ const News = ({ country, category, pageSize, setProgress }) => {
             <div className="col-md-6 col-lg-4" key={element.url}>
               <NewsItem
                 // imageUrl={element.multimedia[0].url}
-                title={element.title ?? ""}
-                description={element.abstract ?? ""}
-                author={element.byline}
-                newsUrl={element.url}
-                date={element.updated_date}
+                // title={element.title ?? ""}
+                // description={element.abstract ?? ""}
+                // author={element.byline}
+                // newsUrl={element.url}
+                // date={element.updated_date}
+                element={element}
               />
             </div>
           ))}

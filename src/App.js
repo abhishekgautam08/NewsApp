@@ -1,33 +1,33 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import LoadingBar from "react-top-loading-bar";
+import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
-  // const pageSize = 9;
-  // const [progress, setProgress] = useState(0);
+  const pageSize = 9;
+  const [progress, setProgress] = useState(0);
 
   return (
     <div>
       <Router>
         <Navbar />
-        {/* <LoadingBar progress={progress} height={3} color="red" /> */}
+        <LoadingBar progress={progress} height={3} color="red" />
         <Routes>
           <Route
             exact
             path="/"
             element={
               <News
-              // setProgress={setProgress}
-              // key="home"
-              // pageSize={pageSize}
-              // category="general"
+                setProgress={setProgress}
+                key="home"
+                pageSize={pageSize}
+                section="home"
               />
             }
           ></Route>
-          {/* <Route
+          <Route
             exact
             path="/business"
             element={
@@ -35,31 +35,31 @@ const App = () => {
                 setProgress={setProgress}
                 key="business"
                 pageSize={pageSize}
-                category="business"
+                section="business"
               />
             }
           ></Route>
           <Route
             exact
-            path="/entertainment"
+            path="/movies"
             element={
               <News
                 setProgress={setProgress}
-                key="entertainment"
+                key="movies"
                 pageSize={pageSize}
-                category="entertainment"
+                section="movies"
               />
             }
           ></Route>
           <Route
             exact
-            path="/general"
+            path="/food"
             element={
               <News
                 setProgress={setProgress}
-                key="general"
+                key="food"
                 pageSize={pageSize}
-                category="general"
+                section="food"
               />
             }
           ></Route>
@@ -71,7 +71,7 @@ const App = () => {
                 setProgress={setProgress}
                 key="health"
                 pageSize={pageSize}
-                category="health"
+                section="health"
               />
             }
           ></Route>
@@ -83,7 +83,7 @@ const App = () => {
                 setProgress={setProgress}
                 key="science"
                 pageSize={pageSize}
-                category="science"
+                section="science"
               />
             }
           ></Route>
@@ -96,7 +96,7 @@ const App = () => {
                 setProgress={setProgress}
                 key="sports"
                 pageSize={pageSize}
-                category="sports"
+                section="sports"
               />
             }
           ></Route>
@@ -108,10 +108,10 @@ const App = () => {
                 setProgress={setProgress}
                 key="technology"
                 pageSize={pageSize}
-                category="technology"
+                section="technology"
               />
             }
-          ></Route> */}
+          ></Route>
         </Routes>
       </Router>
     </div>
