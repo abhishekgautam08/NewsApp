@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 import { envConfigs } from "../utils/config";
-// import PropTypes from "prop-types";
 import Pagination from "./Pagination";
 import { NEWS_API_BASE_URL } from "../utils/constants";
 
@@ -16,7 +15,6 @@ const News = ({ section, setProgress }) => {
     (async () => {
       setLoading(true);
       const url = `${NEWS_API_BASE_URL}/${section}.json?api-key=${envConfigs.newsApiKey}`;
-      console.log(url);
       const data = await fetch(url);
       const parsedData = await data.json();
       setResults((art) => art.concat(parsedData.results));
@@ -50,18 +48,5 @@ const News = ({ section, setProgress }) => {
     </>
   );
 };
-
-// News.defaultProps = {
-//   country: "in",
-//   pageSize: 8,
-//   category: "general",
-// };
-
-// News.propTypes = {
-//   country: PropTypes.string,
-//   pageSize: PropTypes.number,
-//   category: PropTypes.string,
-//   setProgress: PropTypes.func,
-// };
 
 export default News;

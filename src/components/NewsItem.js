@@ -46,14 +46,15 @@ const NewsItem = (props) => {
             </p>
             <p className="card-text">
               <small className="text-muted">
-                {element.author ? element.author : "Unknown"}
+                {element.byline ? element.byline : "Unknown"}
                 <br />
-                <b>Last updated- </b> {Date(element.date).toLocaleString()}
+                <b>Last updated- </b>
+                {Date(element.updated_date).toLocaleString()}
               </small>
             </p>
             <a
               rel="noreferrer"
-              href={element.newsUrl}
+              href={element.url}
               target="_blank"
               className="btn btn-sm btn-primary"
             >
