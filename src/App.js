@@ -6,28 +6,28 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
-  const pageSize = 9;
-  const [progress, setProgress] = useState(0);
+  // const pageSize = 9;
+  // const [progress, setProgress] = useState(0);
 
   return (
     <div>
       <Router>
         <Navbar />
-        <LoadingBar progress={progress} height={3} color="red" />
+        {/* <LoadingBar progress={progress} height={3} color="red" /> */}
         <Routes>
           <Route
             exact
             path="/"
             element={
               <News
-                setProgress={setProgress}
-                key="home"
-                pageSize={pageSize}
-                category="general"
+              // setProgress={setProgress}
+              // key="home"
+              // pageSize={pageSize}
+              // category="general"
               />
             }
           ></Route>
-          <Route
+          {/* <Route
             exact
             path="/business"
             element={
@@ -111,7 +111,7 @@ const App = () => {
                 category="technology"
               />
             }
-          ></Route>
+          ></Route> */}
         </Routes>
       </Router>
     </div>

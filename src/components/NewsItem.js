@@ -4,7 +4,7 @@ import "./NewsItem.css";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const NewsItem = (props) => {
-  let { title, description, imageUrl, newsUrl, author, date, source } = props;
+  let { title, description, imageUrl, newsUrl, author, date } = props;
   return (
     <>
       <div className="container">
@@ -27,33 +27,32 @@ const NewsItem = (props) => {
 
           <div className="card-body">
             <h5 className="card-title">
-              <ReactReadMoreReadLess
+              {/* <ReactReadMoreReadLess
                 charLimit={30}
                 readMoreText={"Read more ▼"}
                 readLessText={"Read less ▲"}
                 readMoreClassName="read-more-less--more"
                 readLessClassName="read-more-less--less"
-              >
-                {title}
-              </ReactReadMoreReadLess>
+              > */}
+              {title}
+              {/* </ReactReadMoreReadLess> */}
               <br />
               <br />
-              <span className="badge bg-secondary">{source}</span>
             </h5>
             <p className="card-text">
-              <ReactReadMoreReadLess
+              {/* <ReactReadMoreReadLess
                 charLimit={30}
                 readMoreText={"Read more ▼"}
                 readLessText={"Read less ▲"}
                 readMoreClassName="read-more-less--more"
                 readLessClassName="read-more-less--less"
-              >
-                {description}
-              </ReactReadMoreReadLess>
+              > */}
+              {description}
+              {/* </ReactReadMoreReadLess> */}
             </p>
             <p className="card-text">
               <small className="text-muted">
-                <b> By-</b> {author ? author : "Unknown"}
+                {author ? author : "Unknown"}
                 <br />
                 <b>Last updated- </b> {new Date(date).toLocaleString()}
               </small>
