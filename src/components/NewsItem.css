@@ -34,3 +34,10 @@
     height: 300px;
   }
 }
+@media only screen and (max-width: 506px) {
+  .card-img {
+    object-fit: cover;
+    width: 250px;
+    height: 300px;
+  }
+}

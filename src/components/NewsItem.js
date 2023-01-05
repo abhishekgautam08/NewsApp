@@ -5,6 +5,7 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const NewsItem = (props) => {
   let { element } = props;
+  const imageUrl = element.multimedia ? element.multimedia[0].url : NoImage;
   return (
     <>
       <div className="container">
@@ -17,13 +18,7 @@ const NewsItem = (props) => {
           }}
         >
           <div className="container-img">
-            <img
-              className="card-img"
-              src={
-                element.multimedia[0].url ? element.multimedia[0].url : NoImage
-              }
-              alt="NOIMAGE"
-            />
+            <img className="card-img" src={imageUrl} alt="NOIMAGE" />
           </div>
 
           <div className="card-body">
@@ -36,8 +31,8 @@ const NewsItem = (props) => {
             <p className="card-text">
               <ReactReadMoreReadLess
                 charLimit={40}
-                readMoreText={" ▼"}
-                readLessText={" ▲"}
+                readMoreText={"▼"}
+                readLessText={"▲"}
                 readMoreClassName="read-more-less--more"
                 readLessClassName="read-more-less--less"
               >
